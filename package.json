@@ -3,9 +3,24 @@
   "version": "1.0.0",
   "description": "Mono repo helper script with nodeJS",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node --experimental-json-modules index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Janos Fekete",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "projects": {
+    "root": "/",
+    "a": "projects/a",
+    "b": "projects/b"
+  },
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "ora": "^6.1.0"
+  }
 }
